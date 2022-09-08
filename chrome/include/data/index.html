@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#main {
+
+				width: 50px;
+				height: 30px;
+				position: fixed;
+				left: 0px;
+				/* top: 0px; */
+				bottom: 0px;
+				padding: 8px 15px 10px;
+				background: url(../images/tablebg3.jpg) right 13px repeat-y #ecf1f7;
+				border-bottom-left-radius: 5px;
+				border-bottom-right-radius: 5px;
+				display: table;
+				z-index: 10000;
+			}
+
+			#main span {
+				width: 100%;
+			}
+
+			#main table {
+				width: 155px;
+			}
+
+			#main table td {
+				text-align: left;
+				vertical-align: middle;
+			}
+
+			#main table tr {
+				line-height: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<table width="100%" cellspacing="0" cellpadding="0" style="margin:0 auto;">
+				<tbody>
+
+					<tr>
+						<td>过滤数据：</td>
+						<td><input type="checkbox" id="se_xuan" checked="checked" /></td>
+					</tr>
+					<tr>
+						<td>VIP等级≥</td>
+						<td><input type="text" id="se_vip" size="8" class="txt1" value="0"
+								oninput="value=value.replace(/[^\-?\d.]/g,'')""></td>
+					</tr>
+					<tr>
+						<td>赐福积分≥</td>
+						<td><input type=" text" id="se_cifu" size="8" class="txt1" value="0"
+								oninput="value=value.replace(/[^\-?\d.]/g,'')"></td>
+					</tr>
+					<tr>
+						<td>采集深度≥</td>
+						<td>
+							<input type="text" id="se_page" size="8" class="txt1" value="1">
+						</td>
+					</tr>
+					<tr>
+						<td>采集模式：</td>
+						<td>
+							<input type="radio" name="cai" checked="checked" id="isone" />循环
+							<input type="radio" name="cai" id="istwo" />深挖
+						</td>
+					</tr>
+					<tr>
+						<td>
+							自动<input type="checkbox" id="se_cha" />
+						</td>
+						<td>
+							<span>
+								<button onclick="cleancache()">清除</button>
+								<button onclick="read()">查询</button>
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<td>间隔时间：</td>
+						<td><input type="text" id="se_time" size="8" class="txt1" value="5"
+								oninput="value=value.replace(/[^\-?\d.]/g,'')"></td>
+					</tr>
+					<tr>
+						<td>缓存数据：</td>
+						<td><input type="checkbox" id="se_save" /></td>
+
+					</tr>
+					<tr>
+						<td>数据：</td>
+						<td>
+							<div id="se_num">0</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- <script>
+			!window.jQuery && document.write("<script src='https://libs.baidu.com/jquery/2.0.0/jquery.min.js'>" + "</scr" +
+				"ipt>");
+		</script> -->		
+		<script type="text/javascript">
+			console.info(typeof(jQuery));
+		
+		</script>
+	</body>
+</html>

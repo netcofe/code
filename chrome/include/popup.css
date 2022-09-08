@@ -1,0 +1,43 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-size: 16px;
+}
+
+.main {
+	width: 800px;
+	
+	max-height: 580px;
+}
+
+.top {
+	width: 800px;
+	height: 30px;
+	background: #ececec;
+}
+
+.content {
+	width: 800px;
+	max-height: 550px;
+	white-space: nowrap;
+	overflow: auto;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.selectitem {
+	margin: 2px;
+}
+
+.item {
+	background: #ececec;
+	margin: 2px;
+	display:-webkit-box
+}
+.item .url{
+	max-width: 700px;
+	min-width: 700px;
+	overflow:hidden;	
+}
+.item .caozuo{
+	padding: 0 0 0 15px;
+}

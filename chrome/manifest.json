@@ -1,0 +1,59 @@
+{
+	"manifest_version": 2,
+	"version": "1.0.0",
+	"name": "__MSG_name__",
+	"default_locale": "zh_CN",
+	"description": "__MSG_description__",
+	"icons": {
+		"128": "icons/o7.png"
+	},
+	"browser_action": {
+		"default_icon": "icons/o7.png",
+		"default_popup": "include/popup.html",
+		"default_title": "__MSG_name__"
+	},
+	"background": {
+		"page": "include/background.html"
+	},
+	"content_scripts": [{
+		"matches": [
+			"<all_urls>"
+		],
+		"js": [
+			"include/jquery.min.js",
+			"include/content.js"
+		],
+		"run_at": "document_idle",
+		"all_frames": true
+	}],
+	"web_accessible_resources": [
+		"*"
+	],
+	// "externally_connectable": {
+	//     "matches": [
+	//         "*://*.baidu.com/*"
+	//     ]
+	// }, 
+	"permissions": [
+		"notifications",
+		"unlimitedStorage",
+		"tabs",
+		"idle",
+		"management",
+		"webNavigation",
+		"webRequest",
+		"webRequestBlocking",
+		"storage",
+		"contextMenus",
+		"chrome://favicon/",
+		"clipboardWrite",
+		"cookies",
+		"\u003Call_urls>"
+	],
+	// "options_ui": {
+	//     "page": "include/options.html",
+	//     "chrome_style": false,
+	//     "open_in_tab": true
+	// },
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
